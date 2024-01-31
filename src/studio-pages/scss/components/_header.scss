@@ -1,0 +1,118 @@
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    @include flex-around (flex, space-around);
+}
+
+.header__content {
+    @extend %flex-align;
+    gap: 124px;
+    padding: 26px 0 20px 0;
+}
+
+.navigation__list {
+    @include flex-around (flex, space-around);
+    margin: 0 auto;
+    text-indent: 50px;
+    gap: 10px;
+}
+
+.navigation {
+    @extend %flex-align;
+}
+
+.navigation__list-item {
+    @include flex-around (flex, space-around);
+    color: black;
+    padding-right: 15px; 
+    margin-right: 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+    position: relative;
+    &:hover {
+        color: #2196F3;
+        fill: #2196F3;
+    }
+}
+
+.navigation__list .navigation__list-item a {
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px;
+    color: #000;
+    transition: color 0.3s ease;
+    position: relative;
+    letter-spacing: 0.28px;
+    line-height: normal;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 2.5px;
+        background-color: #2196F3;
+        bottom: -19px;
+        left: 32px;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+        animation: item-bg 5s infinite;
+    }
+    &:hover, &.active {
+        color: #2196F3;
+        animation: itemText-color 5s infinite;
+    }
+    &:hover::after, &.active::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+@keyframes item-bg {
+    0% {
+        background-color: #2196F3;
+    }
+    45% {
+        background-color: #5621f3;
+    }
+    95% {
+        background-color: #21b4f3;
+    }
+}
+
+@keyframes itemText-color {
+    0% {
+        color: #2196F3;
+    }
+    45% {
+        color: #5621f3;
+    }
+    95% {
+        color: #21b4f3;
+    }
+}
+
+.address {
+    @extend %flex-align;
+    gap: 20px;
+}
+
+.address__link {
+    text-decoration: none;
+    color: black;
+    fill: #000;
+    transition: color 0.3s, transform 0.3s linear;
+    &:hover {
+        transform: translateY(-10px);
+        color: #2196F3;
+        fill: #2196F3;
+    }
+}

@@ -1,0 +1,83 @@
+.information__content {
+    @include flex-around (flex, center);
+    gap: 30px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.information__content-attention {
+    cursor: pointer;
+    transition: transform 0.3s linear;
+    &:hover {
+        transform: translateY(-15px) scale(1.1);
+    }
+}
+
+.information__attention-photo {
+    padding: 25px 100px;
+    border-radius: 4px;
+    background: #F5F4FA;
+}
+
+.information__title {
+    color: #212121;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
+
+.information__text {
+    color: #757575;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.42px;
+}
+
+.information__content-punctuality {
+    cursor: pointer;
+    transition: transform 0.3s linear;
+    &:hover {
+        transform: translateY(-15px) scale(1.1);
+    }
+}
+
+.information__clock-photo {
+    padding: 25px 100px;
+    border-radius: 4px;
+    background: #F5F4FA;
+}
+
+.information__content-planninig {
+    cursor: pointer;
+    transition: transform 0.3s linear;
+    &:hover {
+        transform: translateY(-15px) scale(1.1);
+    }
+}
+
+.information__planning-photo {
+    padding: 33px 100px;
+    border-radius: 4px;
+    background: #F5F4FA;
+}
+
+.information__content-technology {
+    cursor: pointer;
+    transition: transform 0.3s linear;
+    &:hover {
+        transform: translateY(-15px) scale(1.1);
+    }
+}
+
+.information__astronaut-photo {
+    padding: 25px 100px;
+    border-radius: 4px;
+    background: #F5F4FA;
+}
