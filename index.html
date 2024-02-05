@@ -75,15 +75,15 @@
                         <div class="search__contact">
                           <div class="search__contact-name">
                             <label class="contact__name" for="name">Ім'я</label>
-                            <input type="name" class="contact__name-term" name="name">
+                            <input type="name" class="contact__name-term" name="name" required>
                           </div>
                           <div class="search__contact-mobile">
                             <label class="contact__name" for="tel">Телефон</label> 
-                            <input type="tel" class="contact__mobile-term" name="phone">
+                            <input type="tel" class="contact__mobile-term" name="phone" required>
                           </div>
                           <div class="search__contact-email">
                             <label class="contact__name" for="emeil">Пошта</label>
-                            <input type="email" class="contact__email-term" name="emeil">
+                            <input type="email" class="contact__email-term" name="emeil" required>
                           </div>
                           <div class="search__contact-comment">
                             <label class="contact__name" for="text">Коментар</label>
@@ -93,7 +93,10 @@
                       </form>
                       <div class="contract">
                         <div class="contract__circs">
-                            <input type="checkbox" class="contract__circs-check">
+                            <label class="contract__circs-check">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
                             <p class="contract__circs-text">
                                 Погоджуюся з розсилкою та приймаю
                             </p>

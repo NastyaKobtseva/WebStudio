@@ -290,7 +290,7 @@ li {
 }
 
 .search__contact-comment {
-  padding-bottom: 11px;
+  padding-bottom: 3px;
   padding-top: 10px;
   color: #757575;
   font-family: "Roboto";
@@ -312,17 +312,15 @@ li {
 }
 
 .contact__name-term {
-  width: 448px;
+  width: 417px;
   height: 40px;
-  flex-shrink: 0;
-  padding: 5px 25px;
   border-radius: 4px;
-  fill: #212121;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 5px 42px;
   background-image: url("../image/chapter-one/person-black-18dp 1.svg");
   background-size: 18px 18px;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: 3% 50%;
 }
 .contact__name-term:focus, .contact__name-term:focus-visible {
   border: none;
@@ -331,15 +329,15 @@ li {
 }
 
 .contact__mobile-term {
-  width: 448px;
+  width: 417px;
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  padding: 5px 25px;
+  padding: 5px 42px;
   background-image: url("../image/chapter-one/phone-black-18dp 1.svg");
   background-size: 18px 18px;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: 3% 50%;
 }
 .contact__mobile-term:focus, .contact__mobile-term:focus-visible {
   border: none;
@@ -348,15 +346,15 @@ li {
 }
 
 .contact__email-term {
-  width: 448px;
+  width: 417px;
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  padding: 5px 25px;
+  padding: 5px 42px;
   background-image: url("../image/chapter-one/email-black-18dp 1.svg");
   background-size: 18px 18px;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: 3% 50%;
 }
 .contact__email-term:focus, .contact__email-term:focus-visible {
   border: none;
@@ -387,6 +385,64 @@ li {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.contract__circs-check {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  top: -9px;
+  left: 16px;
+}
+
+.contract__circs-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border: 1px solid #212121;
+  border-radius: 3px;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.contract__circs-check input:checked ~ .checkmark {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+.contract__circs-check input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.checkmark:after {
+  left: 4.5px;
+  top: 0;
+  width: 3px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.contract__circs-check input:focus ~ .checkmark {
+  box-shadow: 0 0 1px #2196F3;
 }
 
 .contract__circs-text {
