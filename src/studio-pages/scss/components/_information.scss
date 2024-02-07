@@ -1,5 +1,8 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
 .information__content {
-    @include flex-around (flex, center);
+    @include flex-center;
     gap: 30px;
     padding-top: 94px;
     padding-bottom: 94px;
@@ -80,4 +83,28 @@
     padding: 25px 100px;
     border-radius: 4px;
     background: #F5F4FA;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 768px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .information__content {
+        flex-wrap: wrap;
+        margin-top: 60px;
+    }
+    .information__attention-photo {
+        padding: 25px 142px;
+    }
+    .information__clock-photo {
+        padding: 25px 142px;
+    }
+    .information__planning-photo {
+        padding: 32px 142px;
+    }
+    .information__astronaut-photo {
+        padding: 25px 142px;
+    }
 }

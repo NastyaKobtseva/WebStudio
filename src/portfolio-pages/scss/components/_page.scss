@@ -1,6 +1,7 @@
 .page__navigation {
     align-items: center;
-    @include flex-around (flex, center);
+    display: flex;
+    justify-content: center;
     gap: 20px;
     padding-top: 94px;
     padding-bottom: 48px;
@@ -166,13 +167,15 @@
 }
 
 .caption__block-two, .caption__block-one {
-    @include flex-around (flex, center);
+    display: flex;
+    justify-content: center;
     column-gap: 30px;
     margin-bottom: 30px;
 }
 
 .caption__block-three {
-    @include flex-around (flex, center);
+    display: flex;
+    justify-content: center;
     column-gap: 30px;
 }
 
@@ -182,7 +185,7 @@
     background: #FFF;
     &:hover {
         box-shadow: 0 0 10px 5px ;
-        transform: scale(1.1) translateY(-10px);
+        transform: scale(0.9) translateY(-10px);
         border: 1px solid #EEE;
         box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
     }
@@ -202,4 +205,25 @@
 .product__texts {
     padding-left: 24px;
     padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 768px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .caption__block-one {
+        flex-wrap: wrap;
+    }
+    .caption__block-two {
+        flex-wrap: wrap;
+    }
+    .caption__block-three {
+        flex-wrap: wrap;
+    }
+    .photo1 {
+        width: 354px;
+        height: 294px;
+    }
 }

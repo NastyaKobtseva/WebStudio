@@ -1,3 +1,6 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
 .customers__title {
     color: #212121;
     text-align: center;
@@ -12,7 +15,7 @@
 }
 .regular {
     align-items: center;
-    @include flex-around (flex, center);
+    @include flex-center;
     gap: 30px;
     padding-bottom: 94px;
 }
@@ -20,90 +23,11 @@
 .regular__photo-svg {
     border-radius: 4px;
     border: 2px solid #AFB1B8;
-    width: 45px;
-    height: 56px;
+    width: 125px;
+    height: 50px;
+    fill: #afb1b8;
+    padding: 21px;
     cursor: pointer;
-    padding: 23px 65px;
-    transition: fill 0.3s linear, transform 0.3s linear;
-    &:hover {
-        fill: #2196F3;
-        border: 2px solid #2196F3;
-        transform: scale(1.1);
-        animation: photoRegular 5s infinite;
-    }
-}
-
-.regular__photo-svg-two {
-    border-radius: 4px;
-    border: 2px solid #AFB1B8;
-    width: 45px;
-    height: 56px;
-    cursor: pointer;
-    padding: 23px 65px;
-    transition: fill 0.3s linear, transform 0.3s linear;
-    &:hover {
-        fill: #2196F3;
-        border: 2px solid #2196F3;
-        transform: scale(1.1);
-        animation: photoRegular 5s infinite;
-    }
-}
-
-.regular__photo-svg-three {
-    border-radius: 4px;
-    border: 2px solid #AFB1B8;
-    width: 47px;
-    height: 54px;
-    cursor: pointer;
-    padding: 23px 60px;
-    transition: fill 0.3s linear, transform 0.3s linear;
-    &:hover {
-        fill: #2196F3;
-        border: 2px solid #2196F3;
-        transform: scale(1.1);
-        animation: photoRegular 5s infinite;
-    }
-}
-
-.regular__photo-svg-four {
-    border-radius: 4px;
-    border: 2px solid #AFB1B8;
-    width: 76px;
-    height: 54px;
-    cursor: pointer;
-    padding: 23px 42px;
-    transition: fill 0.3s linear, transform 0.3s linear;
-    &:hover {
-        fill: #2196F3;
-        border: 2px solid #2196F3;
-        transform: scale(1.1);
-        animation: photoRegular 5s infinite;
-    }
-}
-
-.regular__photo-svg-five {
-    border-radius: 4px;
-    border: 2px solid #AFB1B8;
-    width: 80px;
-    height: 54px;
-    cursor: pointer;
-    padding: 23px 40px;
-    transition: fill 0.3s linear, transform 0.3s linear;
-    &:hover {
-        fill: #2196F3;
-        border: 2px solid #2196F3;
-        transform: scale(1.1);
-        animation: photoRegular 5s infinite;
-    }
-}
-
-.regular__photo-svg-six {
-    border-radius: 4px;
-    border: 2px solid #AFB1B8;
-    width: 108px;
-    height: 54px;
-    cursor: pointer;
-    padding: 23px 30px;
     transition: fill 0.3s linear, transform 0.3s linear;
     &:hover {
         fill: #2196F3;
@@ -125,5 +49,20 @@
     95% {
         fill: #9f21f3;
         border: 2px solid #9f21f3;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 768px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .regular {
+        flex-wrap: wrap;
+    }
+    .regular__photo-svg {
+        width: 160px;
+        height: 65px;
     }
 }

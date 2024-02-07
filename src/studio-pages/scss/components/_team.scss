@@ -1,4 +1,7 @@
-.team__content {
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
+.team {
     background: #F5F4FA;
 }
 
@@ -17,7 +20,7 @@
 
 .web {
     align-items: center;
-    @include flex-around (flex, center);
+    @include flex-center;
     gap: 30px;
     padding-bottom: 94px;
 }
@@ -57,7 +60,7 @@
 
 .card__social-networks {
     align-items: center;
-    @include flex-around (flex, center);
+    @include flex-center;
     padding-bottom: 30px;
     gap: 5px;
 }
@@ -153,4 +156,15 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.48px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 768px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .web {
+        flex-wrap: wrap;
+    }
 }

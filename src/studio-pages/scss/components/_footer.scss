@@ -1,19 +1,25 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
 .footer {
     display: block;
     background-color: #2F303A;
-    padding-left: 50px;
+    width: 100%;
     margin-top: 94px;
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
 .footer__content {
-    @include flex-around (flex, space-around);
+    @include flex-around;
 }
 
 .svg-footer {
-    padding-left: 33px;
     padding-bottom: 20px;
+}
+
+.menu {
+    padding: 0;
 }
 
 .menu__item {
@@ -65,7 +71,8 @@
 }
 
 .icons {
-    @extend %flex-align;
+   display: flex;
+   align-items: center;
     gap: 10px;
 }
 
@@ -108,7 +115,8 @@
 }
 
 .newsletter {
-    @extend %flex-align;
+    display: flex;
+    align-items: center;
     gap: 12px;
 }
 
@@ -126,7 +134,8 @@
     }
 }
 .newsletter__button {
-    @extend %flex-align;
+    display: flex;
+    align-items: center;
     width: 160px;
     height: 45px;
     border-radius: 4px;
@@ -207,4 +216,31 @@
     padding-left: 10px;
     padding-top: 2px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 768px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .footer__content {
+        flex-wrap: wrap;
+    }
+    .footer__content-three-text {
+        text-align: center;
+    }
+    .newsletter {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+    }
+    .newsletter__form {
+        width: 450px;
+        height: 42px;
+        margin-bottom: 10px;
+    }
+    .footer__content-one {
+        text-align: center;
+    }
 }

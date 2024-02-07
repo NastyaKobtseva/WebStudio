@@ -1,3 +1,6 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
 .overlay {
     background-image: url('.././image/chapter-one/Img.header.png');
     background-position: center;
@@ -7,7 +10,8 @@
 
 .overlay__content {
     flex-direction: column;
-    @extend %flex-align;
+    display: flex;
+    align-items: center;
 }
 
 .overlay__title {
@@ -74,4 +78,16 @@
 .csstransforms3d .overlay__button:hover span::before, 
 .csstransforms3d .overlay__button:focus span::before {
     background-color: #2196F3;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 768px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .overlay {
+        margin-top: 10px;
+        margin-bottom: 60px;
+    }
 }
