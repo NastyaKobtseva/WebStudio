@@ -1,5 +1,4 @@
 @import "../utils/mixins";
-@import "../utils/placeholders";
 
 .customers__title {
     color: #212121;
@@ -10,14 +9,13 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1.08px;
-    padding-top: 94px;
-    padding-bottom: 50px;
+    padding: 94px 0 50px 0;
 }
 .regular {
     align-items: center;
-    @include flex-center;
+    @include flex-around($display:flex, $j-content:center);
     gap: 30px;
-    padding-bottom: 94px;
+    padding: 0 0 94px 0;
 }
 
 .regular__photo-svg {
@@ -52,12 +50,7 @@
     }
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 768px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
+@media (max-width: 740px) {
     .regular {
         flex-wrap: wrap;
     }

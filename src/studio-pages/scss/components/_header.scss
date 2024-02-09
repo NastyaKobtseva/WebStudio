@@ -1,5 +1,4 @@
 @import "../utils/mixins";
-@import "../utils/placeholders";
 
 a {
     text-decoration: none;
@@ -10,7 +9,7 @@ li {
 }
 
 .header {
-    @include flex-around;
+    @include flex-around($display:flex, $j-content:space-around);
 }
 
 .container {
@@ -19,15 +18,13 @@ li {
 }
 
 .header__content {
-    display: flex;
     align-items: center;
-    gap: 124px;
     padding: 26px 0 20px 0;
-    justify-content: space-between;
+    @include flex-around($display:flex, $j-content:space-between);
 }
 
 .navigation__list {
-    @include flex-around;
+    @include flex-around($display:flex, $j-content:space-around);
     margin: 0 auto;
     text-indent: 50px;
     gap: 10px;
@@ -39,7 +36,7 @@ li {
 }
 
 .navigation__list-item {
-    @include flex-around;
+    @include flex-around($display:flex, $j-content:space-around);
     color: black;
     cursor: pointer;
     transition: color 0.3s;
@@ -102,14 +99,10 @@ li {
     }
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 768px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
+@media (max-width: 740px) {
     .header__content {
         gap: 40px;
+        padding: 26px 0 9px 0;
     }
     .address {
         flex-wrap: wrap;

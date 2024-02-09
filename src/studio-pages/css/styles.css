@@ -18,10 +18,9 @@ li {
 }
 
 .header__content {
-  display: flex;
   align-items: center;
-  gap: 124px;
   padding: 26px 0 20px 0;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -103,14 +102,10 @@ li {
   fill: #2196F3;
 }
 
-@media (max-width: 768px) {
-  .container {
-    width: 768px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
+@media (max-width: 740px) {
   .header__content {
     gap: 40px;
+    padding: 26px 0 9px 0;
   }
   .address {
     flex-wrap: wrap;
@@ -140,8 +135,7 @@ li {
   line-height: 60px;
   letter-spacing: 2.64px;
   text-transform: uppercase;
-  padding-top: 147px;
-  padding-bottom: 30px;
+  padding: 147px 0 30px 0;
 }
 
 .overlay__button {
@@ -196,17 +190,6 @@ li {
   background-color: #2196F3;
 }
 
-@media (max-width: 768px) {
-  .container {
-    width: 768px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  .overlay {
-    margin-top: 10px;
-    margin-bottom: 60px;
-  }
-}
 .backdrop {
   position: fixed;
   top: 0;
@@ -258,7 +241,7 @@ li {
 }
 
 .modal__btn-svg {
-  padding-bottom: 2px;
+  padding: 0 0 2px 0;
 }
 
 .modal__title {
@@ -284,7 +267,7 @@ li {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.12px;
-  padding-top: 12px;
+  padding: 12px 0 0 0;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s linear;
@@ -296,8 +279,7 @@ li {
 }
 
 .search__contact-comment {
-  padding-bottom: 3px;
-  padding-top: 10px;
+  padding: 10px 0 3px 0;
   color: #757575;
   font-family: "Roboto";
   display: flex;
@@ -314,7 +296,7 @@ li {
 }
 
 .contact__name {
-  padding-bottom: 5px;
+  padding: 0 0 5px 0;
 }
 
 .contact__name-term {
@@ -396,8 +378,8 @@ li {
 .contract__circs-check {
   display: inline-block;
   position: relative;
-  padding-left: 25px;
-  margin-right: 10px;
+  padding: 0 0 0 25px;
+  margin: 0 10px 0 0;
   cursor: pointer;
   font-size: 16px;
   top: -9px;
@@ -493,12 +475,7 @@ li {
   transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-  .container {
-    width: 768px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
+@media (max-width: 740px) {
   .modal {
     width: 328px;
     height: 362px;
@@ -513,7 +490,7 @@ li {
   .modal__btn-svg {
     width: 13px;
     height: 13px;
-    padding-top: 4px;
+    padding: 4px 0 0 0;
   }
   .modal__title {
     font-size: 17px;
@@ -593,8 +570,7 @@ li {
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 94px 0 94px 0;
 }
 
 .information__content-attention {
@@ -676,13 +652,11 @@ li {
 
 @media (max-width: 768px) {
   .container {
-    width: 768px;
-    margin: 0 auto;
-    padding: 0 15px;
+    width: 740px;
   }
   .information__content {
     flex-wrap: wrap;
-    margin-top: 60px;
+    gap: 20px;
   }
   .information__attention-photo {
     padding: 25px 142px;
@@ -706,14 +680,14 @@ li {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1.08px;
-  padding-bottom: 50px;
+  padding: 0 0 50px 0;
 }
 
 .group {
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding-bottom: 94px;
+  padding: 0 0 94px 0;
 }
 
 .group__content {
@@ -812,12 +786,7 @@ li {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  .container {
-    width: 768px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
+@media (max-width: 740px) {
   .occupation {
     display: none;
   }
@@ -827,8 +796,7 @@ li {
 }
 
 .team__title {
-  padding-top: 94px;
-  padding-bottom: 50px;
+  padding: 94px 0 50px 0;
   color: #212121;
   text-align: center;
   font-family: "Roboto";
@@ -844,7 +812,7 @@ li {
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding-bottom: 94px;
+  padding: 0 0 94px 0;
 }
 
 .card {
@@ -856,6 +824,11 @@ li {
 }
 .card:hover {
   transform: translateY(-20px) scale(1.1);
+}
+
+.card__photo {
+  height: 260px;
+  width: 270px;
 }
 
 .card__igor {
@@ -884,7 +857,7 @@ li {
   align-items: center;
   display: flex;
   justify-content: center;
-  padding-bottom: 30px;
+  padding: 0 0 30px 0;
   gap: 5px;
 }
 
@@ -985,14 +958,13 @@ li {
   letter-spacing: 0.48px;
 }
 
-@media (max-width: 768px) {
-  .container {
-    width: 768px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
+@media (max-width: 740px) {
   .web {
     flex-wrap: wrap;
+  }
+  .card__photo {
+    height: 324px;
+    width: 334px;
   }
 }
 .customers__title {
@@ -1004,8 +976,7 @@ li {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1.08px;
-  padding-top: 94px;
-  padding-bottom: 50px;
+  padding: 94px 0 50px 0;
 }
 
 .regular {
@@ -1013,7 +984,7 @@ li {
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding-bottom: 94px;
+  padding: 0 0 94px 0;
 }
 
 .regular__photo-svg {
@@ -1047,12 +1018,7 @@ li {
     border: 2px solid #9f21f3;
   }
 }
-@media (max-width: 768px) {
-  .container {
-    width: 768px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
+@media (max-width: 740px) {
   .regular {
     flex-wrap: wrap;
   }
@@ -1066,8 +1032,7 @@ li {
   background-color: #2F303A;
   width: 100%;
   margin-top: 94px;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0 60px 0;
 }
 
 .footer__content {
@@ -1076,7 +1041,7 @@ li {
 }
 
 .svg-footer {
-  padding-bottom: 20px;
+  padding: 0 0 20px 0;
 }
 
 .menu {
@@ -1084,7 +1049,7 @@ li {
 }
 
 .menu__item {
-  padding-bottom: 9px;
+  padding: 0 0 9px 0;
   transition: transform 0.3s linear;
 }
 .menu__item:hover {
@@ -1128,7 +1093,7 @@ li {
   line-height: normal;
   letter-spacing: 0.42px;
   text-transform: uppercase;
-  padding-bottom: 20px;
+  padding: 0 0 20px 0;
 }
 
 .icons {
@@ -1171,7 +1136,7 @@ li {
   line-height: normal;
   letter-spacing: 0.42px;
   text-transform: uppercase;
-  padding-bottom: 20px;
+  padding: 0 0 20px 0;
 }
 
 .newsletter {
@@ -1186,8 +1151,9 @@ li {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  padding-left: 10px;
+  padding: 0 0 0 10px;
   outline: none;
+  color: white;
   transition: transform 0.3s linear;
 }
 .newsletter__form:hover {
@@ -1272,21 +1238,15 @@ li {
   font-weight: 700;
   line-height: 30px;
   letter-spacing: 0.96px;
-  padding-left: 7px;
+  padding: 0 0 0 7px;
 }
 
 .newsletter__button-icon {
-  padding-left: 10px;
-  padding-top: 2px;
+  padding: 2px 0 0 10px;
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .container {
-    width: 768px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
+@media (max-width: 740px) {
   .footer__content {
     flex-wrap: wrap;
   }

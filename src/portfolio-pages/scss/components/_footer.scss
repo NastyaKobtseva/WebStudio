@@ -1,21 +1,19 @@
 @import "../utils/mixins";
-@import "../utils/placeholders";
 
 .footer {
     display: block;
     background-color: #2F303A;
     width: 100%;
-    margin-top: 94px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    margin: 94px 0 0 0;
+    padding: 60px 0 60px 0;
 }
 
 .footer__content {
-    @include flex-around;
+    @include flex-around($display:flex, $j-content:space-around);
 }
 
 .svg-footer {
-    padding-bottom: 20px;
+    padding: 0 0 20px 0;
 }
 
 .menu {
@@ -23,7 +21,7 @@
 }
 
 .menu__item {
-    padding-bottom: 9px;
+    padding: 0 0 9px 0;
     transition: transform 0.3s linear;
     &:hover {
         transform: translateX(10px);
@@ -67,7 +65,7 @@
     line-height: normal;
     letter-spacing: 0.42px;
     text-transform: uppercase;
-    padding-bottom: 20px;
+    padding: 0 0 20px 0;
 }
 
 .icons {
@@ -111,7 +109,7 @@
     line-height: normal;
     letter-spacing: 0.42px;
     text-transform: uppercase;
-    padding-bottom: 20px;
+    padding: 0 0 20px 0;
 }
 
 .newsletter {
@@ -126,8 +124,9 @@
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.30);
     border-radius: 4px;
-    padding-left: 10px;
+    padding: 0 0 0 10px;
     outline: none;
+    color: white;
     transition: transform 0.3s linear;
     &:hover {
         transform: translateY(-5px);
@@ -210,20 +209,14 @@
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 0.96px;
-    padding-left: 7px;
+    padding: 0 0 0 7px;
 }
 .newsletter__button-icon {
-    padding-left: 10px;
-    padding-top: 2px;
+    padding: 2px 0 0 10px;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .container {
-        width: 768px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
     .footer__content {
         flex-wrap: wrap;
     }

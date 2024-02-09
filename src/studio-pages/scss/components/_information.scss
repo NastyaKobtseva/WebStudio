@@ -1,11 +1,9 @@
 @import "../utils/mixins";
-@import "../utils/placeholders";
 
 .information__content {
-    @include flex-center;
+    @include flex-around($display:flex, $j-content:center);
     gap: 30px;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 94px 0 94px 0;
 }
 
 .information__content-attention {
@@ -87,13 +85,11 @@
 
 @media (max-width: 768px) {
     .container {
-        width: 768px;
-        margin: 0 auto;
-        padding: 0 15px;
+        width: 740px;
     }
     .information__content {
         flex-wrap: wrap;
-        margin-top: 60px;
+        gap: 20px;
     }
     .information__attention-photo {
         padding: 25px 142px;

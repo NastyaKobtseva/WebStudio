@@ -1,5 +1,4 @@
 @import "../utils/mixins";
-@import "../utils/placeholders";
 
 .overlay {
     background-image: url('.././image/chapter-one/Img.header.png');
@@ -24,8 +23,7 @@
     line-height: 60px;
     letter-spacing: 2.64px;
     text-transform: uppercase;
-    padding-top: 147px;
-    padding-bottom: 30px;
+    padding: 147px 0 30px 0;
 }
 
 .overlay__button {
@@ -80,14 +78,6 @@
     background-color: #2196F3;
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 768px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
-    .overlay {
-        margin-top: 10px;
-        margin-bottom: 60px;
-    }
+@media (max-width: 740px) {
+
 }

@@ -1,10 +1,10 @@
+@import "../utils/mixins";
+
 .page__navigation {
     align-items: center;
-    display: flex;
-    justify-content: center;
+    @include flex-around($display:flex, $j-content:center);
     gap: 20px;
-    padding-top: 94px;
-    padding-bottom: 48px;
+    padding: 94px 0 48px 0;
 }
 
 .page__navigation-text-one {
@@ -24,7 +24,7 @@
         background-color: #2196F3;
         box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
         color: #FFF;
-        transform: scale(1.3);
+        transform: scale(1.2);
         animation: bg-color 5s infinite linear;
     }
 }
@@ -46,7 +46,7 @@
         background-color: #2196F3;
         box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
         color: #FFF;
-        transform: scale(1.3);
+        transform: scale(1.2);
         animation: bg-color 5s infinite linear;
     }
 }
@@ -68,7 +68,7 @@
         background-color: #2196F3;
         box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
         color: #FFF;
-        transform: scale(1.3);
+        transform: scale(1.2);
         animation: bg-color 5s infinite linear;
     }
 }
@@ -90,7 +90,7 @@
         background-color: #2196F3;
         box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
         color: #FFF;
-        transform: scale(1.3);
+        transform: scale(1.2);
         animation: bg-color 5s infinite linear;
     }
 }
@@ -112,7 +112,7 @@
         background-color: #2196F3;
         box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
         color: #FFF;
-        transform: scale(1.3);
+        transform: scale(1.2);
         animation: bg-color 5s infinite linear;
     }
 }
@@ -166,17 +166,10 @@
     transform: translateX(-50%) translateY(-100%);
 }
 
-.caption__block-two, .caption__block-one {
-    display: flex;
-    justify-content: center;
-    column-gap: 30px;
-    margin-bottom: 30px;
-}
-
-.caption__block-three {
-    display: flex;
-    justify-content: center;
-    column-gap: 30px;
+.caption {
+    flex-wrap: wrap;
+    @include flex-around($display:flex, $j-content:center);
+    gap: 20px;
 }
 
 .product {
@@ -198,32 +191,19 @@
 .product__text {
     font-size: 16px;
     color: #757575;
-    padding-top: 19px;
-    padding-bottom: 20px;
+    padding: 19px 0 20px 0;
 }
 
 .product__texts {
-    padding-left: 24px;
-    padding-top: 20px;
+    padding: 20px 0 0 24px;
 }
 
 @media (max-width: 768px) {
-    .container {
-        width: 768px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
-    .caption__block-one {
-        flex-wrap: wrap;
-    }
-    .caption__block-two {
-        flex-wrap: wrap;
-    }
-    .caption__block-three {
-        flex-wrap: wrap;
+    .caption {
+        justify-content: flex-start;
     }
     .photo1 {
-        width: 354px;
-        height: 294px;
+        width: 334px;
+        height: 274px;
     }
 }

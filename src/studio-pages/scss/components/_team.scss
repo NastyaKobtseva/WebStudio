@@ -1,13 +1,11 @@
 @import "../utils/mixins";
-@import "../utils/placeholders";
 
 .team {
     background: #F5F4FA;
 }
 
 .team__title {
-    padding-top: 94px;
-    padding-bottom: 50px;
+    padding: 94px 0 50px 0;
     color: #212121;
     text-align: center;
     font-family: 'Roboto';
@@ -20,9 +18,9 @@
 
 .web {
     align-items: center;
-    @include flex-center;
+    @include flex-around($display:flex, $j-content:center);
     gap: 30px;
-    padding-bottom: 94px;
+    padding: 0 0 94px 0;
 }
 
 .card {
@@ -34,6 +32,11 @@
     &:hover {
         transform: translateY(-20px) scale(1.1);
     }
+}
+
+.card__photo {
+    height: 260px;
+    width: 270px;
 }
 
 .card__igor {
@@ -60,8 +63,8 @@
 
 .card__social-networks {
     align-items: center;
-    @include flex-center;
-    padding-bottom: 30px;
+    @include flex-around($display:flex, $j-content:center);
+    padding: 0 0 30px 0;
     gap: 5px;
 }
 
@@ -158,13 +161,12 @@
     letter-spacing: 0.48px;
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 768px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
+@media (max-width: 740px) {
     .web {
         flex-wrap: wrap;
+    }
+    .card__photo {
+        height: 324px;
+        width: 334px;
     }
 }
