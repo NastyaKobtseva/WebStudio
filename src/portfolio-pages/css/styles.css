@@ -1,3 +1,8 @@
+.newsletter__button, .newsletter, .address__link, .address, .navigation {
+  display: flex;
+  align-items: center;
+}
+
 a {
   text-decoration: none;
 }
@@ -29,11 +34,6 @@ li {
   margin: 0 auto;
   text-indent: 50px;
   gap: 10px;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
 }
 
 .navigation__list-item {
@@ -82,8 +82,6 @@ li {
 }
 
 .address {
-  display: flex;
-  align-items: center;
   gap: 20px;
 }
 
@@ -91,8 +89,6 @@ li {
   text-decoration: none;
   color: black;
   fill: #000;
-  display: flex;
-  align-items: center;
   gap: 10px;
   transition: color 0.3s;
 }
@@ -102,9 +98,6 @@ li {
 }
 
 @media (max-width: 768px) {
-  .container {
-    width: 740px;
-  }
   .header__content {
     gap: 40px;
     padding: 14px 0 2px 0;
@@ -112,6 +105,14 @@ li {
   .address {
     flex-wrap: wrap;
     gap: 9px;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    display: none;
+  }
+  .line {
+    display: none;
   }
 }
 .page__navigation {
@@ -322,6 +323,41 @@ li {
     height: 274px;
   }
 }
+@media (max-width: 480px) {
+  .page__navigation {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .page__navigation-text-one {
+    margin: 0;
+  }
+  .page__navigation-text-two {
+    padding: 6px 30px;
+    margin: 0;
+  }
+  .page__navigation-text-three {
+    padding: 6px 30px;
+    margin: 0;
+  }
+  .page__navigation-text-four {
+    padding: 6px 30px;
+    margin: 0;
+  }
+  .page__navigation-text-five {
+    padding: 6px 30px;
+    margin: 0;
+  }
+  .photo1 {
+    width: 450px;
+    height: 294px;
+  }
+}
+.newsletter__button, .newsletter, .navigation, .address, .address__link {
+  display: flex;
+  align-items: center;
+}
+
 .footer {
   display: block;
   background-color: #2F303A;
@@ -435,8 +471,6 @@ li {
 }
 
 .newsletter {
-  display: flex;
-  align-items: center;
   gap: 12px;
 }
 
@@ -456,8 +490,6 @@ li {
 }
 
 .newsletter__button {
-  display: flex;
-  align-items: center;
   width: 160px;
   height: 45px;
   border-radius: 4px;
@@ -560,5 +592,34 @@ li {
   }
   .footer__content-one {
     text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .newsletter__form {
+    width: 440px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  .footer__content {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    gap: 60px;
+    text-align: center;
+  }
+}
+.navigation, .address, .address__link, .newsletter, .newsletter__button {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 740px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: 450px;
   }
 }

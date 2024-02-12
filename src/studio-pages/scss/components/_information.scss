@@ -84,9 +84,6 @@
 }
 
 @media (max-width: 768px) {
-    .container {
-        width: 740px;
-    }
     .information__content {
         flex-wrap: wrap;
         gap: 20px;
@@ -102,5 +99,20 @@
     }
     .information__astronaut-photo {
         padding: 25px 142px;
+    }
+}
+
+@media (max-width: 480px) {
+    .information__attention-photo {
+        padding: 25px 190px;
+    }
+    .information__clock-photo {
+        padding: 25px 190px;
+    }
+    .information__planning-photo {
+        padding: 32px 190px;
+    }
+    .information__astronaut-photo {
+        padding: 25px 190px;
     }
 }

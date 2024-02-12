@@ -1,4 +1,9 @@
 @charset "UTF-8";
+.newsletter__button, .newsletter, .overlay__content, .address__link, .address, .header__content-top {
+  display: flex;
+  align-items: center;
+}
+
 a {
   text-decoration: none;
 }
@@ -30,11 +35,6 @@ li {
   margin: 0 auto;
   text-indent: 50px;
   gap: 10px;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
 }
 
 .navigation__list-item {
@@ -83,8 +83,6 @@ li {
 }
 
 .address {
-  display: flex;
-  align-items: center;
   gap: 20px;
 }
 
@@ -92,8 +90,6 @@ li {
   text-decoration: none;
   color: black;
   fill: #000;
-  display: flex;
-  align-items: center;
   gap: 10px;
   transition: color 0.3s;
 }
@@ -112,6 +108,16 @@ li {
     gap: 9px;
   }
 }
+@media (max-width: 480px) {
+  .header {
+    display: none;
+  }
+}
+.newsletter__button, .newsletter, .overlay__content, .header__content-top, .address, .address__link {
+  display: flex;
+  align-items: center;
+}
+
 .overlay {
   background-image: url(".././image/chapter-one/Img.header.png");
   background-position: center;
@@ -121,8 +127,6 @@ li {
 
 .overlay__content {
   flex-direction: column;
-  display: flex;
-  align-items: center;
 }
 
 .overlay__title {
@@ -188,6 +192,28 @@ li {
 .csstransforms3d .overlay__button:hover span::before,
 .csstransforms3d .overlay__button:focus span::before {
   background-color: #2196F3;
+}
+
+@media (max-width: 480px) {
+  .overlay__title {
+    color: #FFF;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 42px;
+    letter-spacing: 1.56px;
+    text-transform: uppercase;
+  }
+  .overlay__button {
+    font-size: 16px;
+    padding: 10px 22px;
+  }
+}
+.newsletter__button, .newsletter, .header__content-top, .address, .address__link, .overlay__content {
+  display: flex;
+  align-items: center;
 }
 
 .backdrop {
@@ -651,9 +677,6 @@ li {
 }
 
 @media (max-width: 768px) {
-  .container {
-    width: 740px;
-  }
   .information__content {
     flex-wrap: wrap;
     gap: 20px;
@@ -669,6 +692,20 @@ li {
   }
   .information__astronaut-photo {
     padding: 25px 142px;
+  }
+}
+@media (max-width: 480px) {
+  .information__attention-photo {
+    padding: 25px 190px;
+  }
+  .information__clock-photo {
+    padding: 25px 190px;
+  }
+  .information__planning-photo {
+    padding: 32px 190px;
+  }
+  .information__astronaut-photo {
+    padding: 25px 190px;
   }
 }
 .occupation__title {
@@ -967,6 +1004,12 @@ li {
     width: 334px;
   }
 }
+@media (max-width: 480px) {
+  .card__photo {
+    height: 434px;
+    width: 444px;
+  }
+}
 .customers__title {
   color: #212121;
   text-align: center;
@@ -1027,6 +1070,11 @@ li {
     height: 65px;
   }
 }
+.newsletter__button, .newsletter, .header__content-top, .address, .address__link, .overlay__content {
+  display: flex;
+  align-items: center;
+}
+
 .footer {
   display: block;
   background-color: #2F303A;
@@ -1140,8 +1188,6 @@ li {
 }
 
 .newsletter {
-  display: flex;
-  align-items: center;
   gap: 12px;
 }
 
@@ -1161,8 +1207,6 @@ li {
 }
 
 .newsletter__button {
-  display: flex;
-  align-items: center;
   width: 160px;
   height: 45px;
   border-radius: 4px;
@@ -1259,11 +1303,35 @@ li {
     display: flex;
   }
   .newsletter__form {
-    width: 450px;
+    width: 440px;
     height: 42px;
     margin-bottom: 10px;
   }
   .footer__content-one {
     text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .newsletter__form {
+    width: 440px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  .footer__content {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    gap: 60px;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 740px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: 450px;
   }
 }

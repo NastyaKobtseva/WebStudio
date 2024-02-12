@@ -207,3 +207,34 @@
         height: 274px;
     }
 }
+
+@media (max-width: 480px) {
+    .page__navigation {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start;
+    }
+    .page__navigation-text-one {
+        margin: 0;
+    }
+    .page__navigation-text-two {
+        padding: 6px 30px;
+        margin: 0;
+    }
+    .page__navigation-text-three {
+        padding: 6px 30px;
+        margin: 0;
+    }
+    .page__navigation-text-four {
+        padding: 6px 30px;
+        margin: 0;
+    }
+    .page__navigation-text-five {
+        padding: 6px 30px;
+        margin: 0;
+    }
+    .photo1 {
+        width: 450px;
+        height: 294px;
+    }
+}

@@ -170,3 +170,10 @@
         width: 334px;
     }
 }
+
+@media (max-width: 480px) {
+    .card__photo {
+        height: 434px;
+        width: 444px;
+    }
+}

@@ -1,5 +1,5 @@
 @import "../utils/mixins";
-
+@import "../utils/placeholders";
 a {
     text-decoration: none;
 }
@@ -30,9 +30,8 @@ li {
     gap: 10px;
 }
 
-.navigation {
-    display: flex;
-    align-items: center;
+.header__content-top {
+    @extend %flex-box;
 }
 
 .navigation__list-item {
@@ -80,8 +79,7 @@ li {
 }
 
 .address {
-    display: flex;
-    align-items: center;
+    @extend %flex-box;
     gap: 20px;
 }
 
@@ -89,8 +87,7 @@ li {
     text-decoration: none;
     color: black;
     fill: #000;
-    display: flex;
-    align-items: center;
+    @extend %flex-box;
     gap: 10px;
     transition: color 0.3s;
     &:hover {
@@ -107,5 +104,11 @@ li {
     .address {
         flex-wrap: wrap;
         gap: 9px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        display: none;
     }
 }

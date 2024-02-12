@@ -1,4 +1,5 @@
 @import "../utils/mixins";
+@import "../utils/placeholders";
 
 .overlay {
     background-image: url('.././image/chapter-one/Img.header.png');
@@ -9,8 +10,7 @@
 
 .overlay__content {
     flex-direction: column;
-    display: flex;
-    align-items: center;
+    @extend %flex-box;
 }
 
 .overlay__title {
@@ -78,6 +78,20 @@
     background-color: #2196F3;
 }
 
-@media (max-width: 740px) {
-
+@media (max-width: 480px) {
+    .overlay__title {
+        color: #FFF;
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 42px;
+        letter-spacing: 1.56px;
+        text-transform: uppercase;
+    }
+    .overlay__button {
+        font-size: 16px;
+        padding: 10px 22px;
+    }
 }
